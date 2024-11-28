@@ -8,19 +8,23 @@
 ## 🐳 Docker Images
 
 ```bash
-# List non-dangling images (default behavior) with a valid tag and repository
+# List non-dangling images (default behavior) with a valid tag and repository 🔍  
 sudo docker images
 
-# List all images, including intermediate ones
+# List all images, including intermediate ones without tag and repository 🔍  
 sudo docker images -a
 
-# Remove dangling images (cleanup)
+# Remove dangling images (cleanup)  ❌
 sudo docker image prune
 
-## 📦 Docker container
-
-# Show all running containers
+# Show all running containers ⚓
 sudo docker ps
 
-# Show all containers (running and stopped)
+# Show all containers (running and stopped) ⚓
 sudo docker ps -a
+
+# Show all volumes 🔍  
+sudo docker volume ls
+
+# Remove all Voume  ❌
+docker volume prune
