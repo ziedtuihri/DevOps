@@ -31,6 +31,7 @@ docker volume prune
 ```
 ## 🤖 Jenkins
 
+```bash
 # 🔄 Restart Jenkins  
 sudo service jenkins restart  
 # Restarts the Jenkins service to apply changes or resolve issues.  
@@ -45,4 +46,5 @@ sudo service jenkins start
 
 # 📊 Check Jenkins Status  
 sudo service jenkins status  
-# Displays whether Jenkins is active, stopped, or experiencing issues.  
+# Displays whether Jenkins is active, stopped, or experiencing issues.
+```
