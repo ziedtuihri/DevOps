@@ -28,3 +28,21 @@ sudo docker volume ls
 
 # Remove all Voume  ❌
 docker volume prune
+```
+## 🤖 Jenkins
+
+# 🔄 Restart Jenkins  
+sudo service jenkins restart  
+# Restarts the Jenkins service to apply changes or resolve issues.  
+
+# ⛔ Stop Jenkins  
+sudo service jenkins stop  
+# Stops the Jenkins service completely.  
+
+# ▶️ Start Jenkins  
+sudo service jenkins start  
+# Starts the Jenkins service if it's not running.  
+
+# 📊 Check Jenkins Status  
+sudo service jenkins status  
+# Displays whether Jenkins is active, stopped, or experiencing issues.  
