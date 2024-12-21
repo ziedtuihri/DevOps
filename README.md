@@ -34,7 +34,9 @@ docker volume prune
 ```
 ## 🤖 Jenkins
 
-```bash 
+```bash
+# http://<<IP-VM>>:8080/
+
 # 🔄 Restart Jenkins  
 sudo service jenkins restart  
 # Restarts the Jenkins service to apply changes or resolve issues.  
@@ -51,3 +53,33 @@ sudo service jenkins start
 sudo service jenkins status  
 # Displays whether Jenkins is active, stopped, or experiencing issues.
 ```
+
+
+Finding the IP Address of a Virtual Machine (VM)
+To find the IP address of your virtual machine (VM), you can use one of the following two commands:
+
+ip addr
+ifconfig
+
+Example:
+Here is an example of the output you might see:
+
+Using ip addr:
+
+```bash
+Copy code
+ens33: 
+    inet 192.168.24.129/24 scope global ens33
+    valid_lft forever preferred_lft forever
+```
+
+Using ifconfig:
+
+```bash
+Copy code
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.24.129  netmask 255.255.255.0  broadcast 192.168.24.255
+        inet6 fe80::20c:29ff:fe02:3905  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:02:39:05  txqueuelen 1000  (Ethernet)
+```
+
