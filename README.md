@@ -110,4 +110,33 @@ Copy code
 mousepad yourfile.xml
 ```
 
+# SonarQube Integration with Jenkins  
+
+## What is SonarQube?  
+SonarQube is an open-source platform for continuous code quality inspection. It performs static code analysis to identify:  
+- **Bugs**  
+- **Security vulnerabilities**  
+- **Code smells**  
+
+SonarQube helps developers maintain high-quality, secure, and maintainable software by integrating seamlessly into the development workflow. This allows teams to catch issues early and ensure better overall software quality.  
+
+---
+
+## Why Integrate SonarQube with Jenkins Pipeline?  
+Integrating SonarQube with Jenkins Pipeline automates the process of continuous code quality and security checks during the CI/CD pipeline.  
+
+### Key Benefits:  
+- **Automated Analysis**: Every code change is analyzed automatically for issues like bugs and security vulnerabilities.  
+- **Early Feedback**: Developers receive immediate feedback, enabling quick fixes for potential problems.  
+- **Enforces Standards**: Ensures that coding standards are followed across the project.  
+- **Improved Software Quality**: Consistent checks lead to better quality, maintainability, and security of the software.  
+
+---
+
+## Overview of the Integration  
+The integration between SonarQube and Jenkins simplifies static code analysis by automating the process as part of the Jenkins Pipeline. This ensures:  
+- **Code is analyzed on every build.**  
+- **Issues are flagged early in the development cycle.**  
+- **Development teams can focus on delivering high-quality software.**  
+
 
