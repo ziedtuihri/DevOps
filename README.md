@@ -36,6 +36,8 @@ docker volume prune
 
 ```bash
 # http://<<IP-VM>>:8080/
+# Directory Structure:   /var/lib/jenkins/workspace
+
 
 # 🔄 Restart Jenkins  
 sudo service jenkins restart  
