@@ -83,3 +83,8 @@ ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         ether 00:0c:29:02:39:05  txqueuelen 1000  (Ethernet)
 ```
 
+Ubuntu commande 
+
+open a folder with grafical interface
+nautilus /path/to/your/folder
+
