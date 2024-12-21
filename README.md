@@ -88,3 +88,26 @@ Ubuntu commande
 open a folder with grafical interface
 nautilus /path/to/your/folder
 
+
+Using a GUI Text Editor:
+
+gedit (GNOME's default editor):
+
+```bash
+Copy code
+gedit yourfile.xml
+kate (KDE text editor):
+```
+
+```bash
+Copy code
+kate yourfile.xml
+mousepad (Lightweight editor for XFCE):
+```
+
+```bash
+Copy code
+mousepad yourfile.xml
+```
+
+
