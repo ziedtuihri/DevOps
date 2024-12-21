@@ -36,6 +36,8 @@ docker volume prune
 
 ```bash
 # http://<<IP-VM>>:8080/
+# Directory Structure:   /var/lib/jenkins/workspace
+
 
 # 🔄 Restart Jenkins  
 sudo service jenkins restart  
@@ -82,4 +84,133 @@ ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet6 fe80::20c:29ff:fe02:3905  prefixlen 64  scopeid 0x20<link>
         ether 00:0c:29:02:39:05  txqueuelen 1000  (Ethernet)
 ```
+
+Ubuntu commande 
+
+open a folder with grafical interface
+nautilus /path/to/your/folder
+
+
+Using a GUI Text Editor:
+
+gedit (GNOME's default editor):
+
+```bash
+Copy code
+gedit yourfile.xml
+kate (KDE text editor):
+```
+
+```bash
+Copy code
+kate yourfile.xml
+mousepad (Lightweight editor for XFCE):
+```
+
+```bash
+Copy code
+mousepad yourfile.xml
+```
+
+# SonarQube Integration with Jenkins  
+
+## What is SonarQube?  
+SonarQube is an open-source platform for continuous code quality inspection. It performs static code analysis to identify:  
+- **Bugs**  
+- **Security vulnerabilities**  
+- **Code smells**  
+
+SonarQube helps developers maintain high-quality, secure, and maintainable software by integrating seamlessly into the development workflow. This allows teams to catch issues early and ensure better overall software quality.  
+
+---
+
+## Why Integrate SonarQube with Jenkins Pipeline?  
+Integrating SonarQube with Jenkins Pipeline automates the process of continuous code quality and security checks during the CI/CD pipeline.  
+
+### Key Benefits:  
+- **Automated Analysis**: Every code change is analyzed automatically for issues like bugs and security vulnerabilities.  
+- **Early Feedback**: Developers receive immediate feedback, enabling quick fixes for potential problems.  
+- **Enforces Standards**: Ensures that coding standards are followed across the project.  
+- **Improved Software Quality**: Consistent checks lead to better quality, maintainability, and security of the software.  
+
+---
+
+## Overview of the Integration  
+The integration between SonarQube and Jenkins simplifies static code analysis by automating the process as part of the Jenkins Pipeline. This ensures:  
+- **Code is analyzed on every build.**  
+- **Issues are flagged early in the development cycle.**  
+- **Development teams can focus on delivering high-quality software.**  
+
+# SonarQube Cheat Sheet  
+
+## 1. Installation  
+- **Download**: Obtain the SonarQube server from the [official website](https://www.sonarsource.com/).  
+- **Extract**: Unzip the downloaded file to a desired location.  
+- **Configure**: Modify the `sonar.properties` file to customize the server settings.  
+- **Start**: Launch the SonarQube server using the appropriate script or command.  
+
+---
+
+## 2. Integration with CI/CD Pipeline  
+- **Install Plugin**: Add the SonarScanner plugin to your CI/CD tool (e.g., Jenkins, Azure DevOps).  
+- **Configure Plugin**: Set up the plugin to connect to your SonarQube server.  
+- **Add Analysis Step**: Include a SonarQube analysis step in your pipeline configuration file.  
+- **Run Pipeline**: Execute the pipeline to trigger the SonarQube analysis.  
+
+---
+
+## 3. Quality Gates  
+- **Define Gates**: Set thresholds for code quality metrics such as:  
+  - Code coverage  
+  - Code duplication  
+  - Code smells  
+- **Configure in SonarQube**: Create and manage quality gates on the SonarQube server.  
+- **Enforce Gates**: Use SonarScanner to validate the code against the quality gates.  
+- **Action on Failure**: Fail the build or take corrective measures if thresholds are not met.  
+
+---
+
+## 4. Code Analysis  
+- **Key Features**: SonarQube provides detailed insights, including:  
+  - Code smells, bugs, vulnerabilities, and security hotspots  
+  - Metrics for code coverage, duplication, and technical debt  
+- **Multi-language Support**: Analyze code written in various programming languages and frameworks.  
+
+---
+
+## 5. Custom Rules  
+- **Define Rules**: Create custom coding standards or import external rule sets.  
+- **Configure in SonarQube**: Add custom rules using the rule engine or by importing files.  
+- **Run Analysis**: Ensure custom rules are enforced during SonarQube scans.  
+
+---
+
+## 6. Reporting and Notifications  
+- **Reports**:  
+  - Access detailed code quality reports through the SonarQube web interface.  
+  - Export reports in formats such as PDF or XML.  
+- **Notifications**:  
+  - Set up alerts for quality issues via email, Slack, or other communication channels.  
+
+---
+
+## 7. Plugin Ecosystem  
+- **Explore Plugins**: Extend SonarQube’s capabilities with a wide range of plugins.  
+- **Popular Plugins**:  
+  - SonarLint for IDE integration  
+  - SCM plugins for Git or SVN  
+  - Issue tracker integrations like JIRA  
+- **Install Plugins**: Add functionality for additional languages, integrations, and tools.  
+
+---
+
+## 8. Best Practices  
+- **Frequent Analysis**: Run SonarQube scans regularly as part of your CI/CD pipeline.  
+- **Set Realistic Gates**: Define thresholds based on project-specific requirements.  
+- **Prompt Fixes**: Address issues immediately to reduce technical debt.  
+- **Continuous Improvement**: Monitor and improve code quality using reports and metrics.  
+
+---
+
+> **Note**: This cheat sheet offers a concise overview. For detailed instructions and advanced use cases, refer to the [official SonarQube documentation](https://docs.sonarqube.org/).  
 
