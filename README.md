@@ -8,6 +8,9 @@
 ## 🐳 Docker Images
 
 ```bash
+# we can add permissions to docker to not repeat any time sudo like this:
+sudo chmod 777 /var/run/docker.sock
+
 # List non-dangling images (default behavior) with a valid tag and repository 🔍  
 sudo docker images
 
