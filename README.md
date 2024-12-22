@@ -114,6 +114,10 @@ mousepad yourfile.xml
 
 # SonarQube Integration with Jenkins  
 
+docs:
+https://www.youtube.com/watch?v=9cebihBfF4A
+https://github.com/pritisuryawanshi
+
 ## What is SonarQube?  
 SonarQube is an open-source platform for continuous code quality inspection. It performs static code analysis to identify:  
 - **Bugs**  
