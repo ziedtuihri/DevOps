@@ -87,11 +87,13 @@ ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 Ubuntu commande 
 
-open a folder with grafical interface
+<h2>open a folder with grafical interface</h2>
+
+```bash
 nautilus /path/to/your/folder
+```
 
-
-Using a GUI Text Editor:
+<h2> Using a GUI Text Editor: </h2>
 
 gedit (GNOME's default editor):
 
