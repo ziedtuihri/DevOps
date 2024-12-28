@@ -32,6 +32,72 @@ sudo docker volume ls
 # Remove all Voume  ❌
 docker volume prune
 ```
+
+# Secure methods for authenticating with GitHub
+
+# GitHub Authentication: SSH vs Token-Based Authentication
+
+When working with GitHub, choosing the right authentication method depends on your workflow and security needs. Below is a comparison of SSH and Token-Based Authentication to help you decide which is best for your use case.
+
+## 1. SSH Authentication
+
+### How It Works
+You generate an SSH key pair (private and public keys) on your machine. The public key is added to your GitHub account, and the private key stays secure on your device.
+
+### Pros
+- **Convenience**: Once set up, SSH does not require you to enter credentials for every push or pull.
+- **Security**: Your private key is stored locally and never transmitted over the network.
+- **Developer Standard**: SSH is widely used for interacting with remote servers and version control systems.
+- **No Passwords**: Eliminates the risk of exposing credentials in scripts or accidentally sharing them.
+
+### Cons
+- **Setup Complexity**: Requires generating an SSH key and adding it to GitHub, which can be challenging for beginners.
+- **Device-Specific**: SSH keys are tied to the device where they are generated. Switching machines requires reconfiguration.
+
+### When to Use SSH
+- You are working on your personal or trusted machine.
+- You want a long-term setup for authentication without entering credentials repeatedly.
+
+## 2. Token-Based Authentication
+
+### Pros
+- **Ease of Use in Automation**: Tokens are ideal for CI/CD pipelines and automated environments like Jenkins or Docker.
+- **Granular Permissions**: Assign specific scopes to a token (e.g., read-only access).
+- **Cross-Device Compatibility**: Tokens can be used across multiple devices without additional setup.
+
+### Cons
+- **Expiration**: Tokens may expire, requiring regeneration and updates.
+- **Less Convenient for Manual Use**: Requires entering or copying the token for operations unless stored in a credential helper.
+- **Security Risks**: Exposed tokens can be misused within the defined permissions.
+
+### When to Use Tokens
+- For automations, scripts, or CI/CD systems.
+- If you frequently work across multiple devices.
+
+---
+
+## Summary Table
+
+| Feature                     | SSH                              | Token-Based Authentication          |
+|-----------------------------|----------------------------------|-------------------------------------|
+| **Setup Complexity**        | Medium                          | Low                                 |
+| **Ease of Use**             | High (after setup)              | Medium                              |
+| **Security**                | High                            | High (if token is kept secure)      |
+| **Best for**                | Personal/long-term development  | Automation and multi-device setups  |
+| **Dependency**              | Device-specific                 | Cross-device                       |
+
+---
+
+## Conclusion
+Both SSH and Token-Based Authentication are secure methods for working with GitHub. Choose the one that aligns with your workflow:
+- Use **SSH** for personal, long-term setups on trusted machines.
+- Use **Tokens** for automation, CI/CD pipelines, or working across multiple devices.
+
+For detailed setup instructions, refer to GitHub's official documentation:
+- [SSH Key Setup](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+- [Token Authentication Setup](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+
 ## 🤖 Jenkins
 
 ```bash
