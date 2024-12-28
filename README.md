@@ -73,7 +73,9 @@ You generate an SSH key pair (private and public keys) on your machine. The publ
 ### When to Use Tokens
 - For automations, scripts, or CI/CD systems.
 - If you frequently work across multiple devices.<br>
-https://medium.com/@rahulsharan512/how-to-connect-git-bash-to-your-github-account-two-easy-methods-a332e037dea5
+https://medium.com/@rahulsharan512/how-to-connect-git-bash-to-your-github-account-two-easy-methods-a332e037dea5  <br>
+git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git
+and see this post: https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token
 ---
 
 ## Summary Table
