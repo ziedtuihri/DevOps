@@ -73,7 +73,7 @@ You generate an SSH key pair (private and public keys) on your machine. The publ
 ### When to Use Tokens
 - For automations, scripts, or CI/CD systems.
 - If you frequently work across multiple devices.
-
+https://medium.com/@rahulsharan512/how-to-connect-git-bash-to-your-github-account-two-easy-methods-a332e037dea5
 ---
 
 ## Summary Table
