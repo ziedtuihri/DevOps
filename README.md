@@ -126,7 +126,9 @@ sudo service jenkins start
 sudo service jenkins status  
 # Displays whether Jenkins is active, stopped, or experiencing issues.
 ```
-
+install plugin: <br>
+- Stage View<br>
+- sonar qube
 
 Finding the IP Address of a Virtual Machine (VM)
 To find the IP address of your virtual machine (VM), you can use one of the following two commands:
