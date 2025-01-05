@@ -128,7 +128,9 @@ sudo service jenkins status
 ```
 install plugin: <br>
 - Stage View<br>
-- SonarQube
+- SonarQube Integration
+- Maven Integration
+- SonarQube Scanner
 
 Finding the IP Address of a Virtual Machine (VM)
 To find the IP address of your virtual machine (VM), you can use one of the following two commands:
