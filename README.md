@@ -125,6 +125,9 @@ sudo service jenkins start
 # 📊 Check Jenkins Status  
 sudo service jenkins status  
 # Displays whether Jenkins is active, stopped, or experiencing issues.
+
+# OR
+sudo systemctl status jenkins
 ```
 install plugin: <br>
 - Stage View<br>
