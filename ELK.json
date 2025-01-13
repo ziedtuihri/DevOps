@@ -1,0 +1,189 @@
+
+
+
+PUT /produits
+{
+  "mappings": {
+    "properties": {
+      "id": { "type": "integer" },
+      "nom_produit": { "type": "text" },
+      "categorie": { "type": "text" },
+      "prix": { "type": "double" }
+    }
+  }
+}
+
+
+PUT /clients
+{
+  "mappings": {
+    "properties": {
+      "id": { "type": "integer" },
+      "nom_client": { "type": "text" },
+      "email": { "type": "text" },
+      "adresse": { "type": "text" },
+      "latitude": { "type": "double" },
+      "longitude": { "type": "double" },
+      "date_inscription": { "type": "date" }
+    }
+  }
+}
+
+PUT /ventes
+{
+  "mappings": {
+    "properties": {
+      "id": { "type": "integer" },
+      "produit_id": { "type": "integer" },
+      "client_id": { "type": "integer" },
+      "montant": { "type": "double" },
+      "date_vente": { "type": "date" }
+    }
+  }
+}
+
+DELETE /produits,clients,ventes
+
+
+GET /_cat/indices?v
+
+
+
+POST clients/_update_by_query
+{
+  "script": {
+    "source": "ctx._source.categorie = 'Accessoires'",
+    "lang": "painless"
+  },
+  "query": {
+    "match": {
+      "nom_produit": "Chargeur sans fil"
+    }
+  }
+}
+
+
+/* *********************************************************************** */
+
+
+
+
+DELETE /bigdata
+
+
+GET /_cat/indices?v
+
+GET /produits/_count
+GET /clients/_count
+GET /ventes/_count
+
+
+GET /produits/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /ventes/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /clients/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+GET /bigdata2/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+#  empty we should add this product manually 
+GET clients/_search
+{
+  "query": {
+    "match": {
+      "nom_produit": "Chargeur sans fil"
+    }
+  }
+}
+
+# add the spesific product
+POST clients/_doc
+{
+  "id": "26",
+  "nom_produit": "Chargeur sans fil",
+  "categorie": "Électronique",
+  "prix": "150.00"
+}
+
+# Modifier la catégorie du produit
+POST clients/_update_by_query
+{
+  "script": {
+    "source": "ctx._source.categorie = 'Accessoires'",
+    "lang": "painless"
+  },
+  "query": {
+    "match": {
+      "nom_produit": "Chargeur sans fil"
+    }
+  }
+}
+
+GET clients/_search
+{
+  "query": {
+    "match": {
+      "nom_client": "test"
+    }
+  }
+}
+
+
+POST clients/_delete_by_query
+{
+  "query": {
+    "match": {
+      "nom_client": "test"
+    }
+  }
+}
+
+GET /produits/_mapping
+
+
+POST /produits/_search
+{
+  "query": {
+    "match": {
+      "categorie": "Electronique"
+    }
+  },
+  "_source": ["id"]
+}
+
+
+
+POST /ventes/_search
+{
+  "query": {
+    "terms": {
+      "produit_id": [1, 2, 3, 4, 5]
+    }
+  }
+}
+
+
+
+https://www.youtube.com/watch?v=bKC8AryxNPE
+https://toughcoding.net/join-indexes-using-esql-in-elasticsearch
