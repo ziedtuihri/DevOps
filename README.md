@@ -301,10 +301,12 @@ The integration between SonarQube and Jenkins simplifies static code analysis by
 
 > **Note**: This cheat sheet offers a concise overview. For detailed instructions and advanced use cases, refer to the [official SonarQube documentation](https://docs.sonarqube.org/).  
 
-
-
+```bash
 sudo docker cp prometheus:/etc/prometheus/prometheus.yml .
 nano prometheus.yml
 sudo docker cp prometheus.yml prometheus:/etc/prometheus/prometheus.yml
 sudo docker restart prometheus
 sudo docker exec prometheus kill -HUP 1
+```
+
+
