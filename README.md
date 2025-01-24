@@ -307,6 +307,15 @@ nano prometheus.yml
 sudo docker cp prometheus.yml prometheus:/etc/prometheus/prometheus.yml
 sudo docker restart prometheus
 sudo docker exec prometheus kill -HUP 1
+
+
+
+doker
+    environment {
+    registry = "YourDockerhubAccount/YourRepository"
+    registryCredential = 'dockerhub_id'
+    dockerImage = ''
+    }
 ```
 
 
