@@ -316,6 +316,16 @@ doker
     registryCredential = 'dockerhub_id'
     dockerImage = ''
     }
+
+
+ziedth@ziedth-X541UVK:~$ id jenkins
+uid=124(jenkins) gid=137(jenkins) groups=137(jenkins)
+ziedth@ziedth-X541UVK:~$ sudo usermod -aG docker jenkins
+ziedth@ziedth-X541UVK:~$ id jenkins
+uid=124(jenkins) gid=137(jenkins) groups=137(jenkins),136(docker)
+ziedth@ziedth-X541UVK:~$ sudo service jenkins stop
+ziedth@ziedth-X541UVK:~$ sudo service jenkins start
+
 ```
 
 
